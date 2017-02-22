@@ -488,12 +488,12 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="IC1" library="at90can128" package="TQFP64" value="AT90CAN128" x="12.7" y="12.7" rot="MR0"/>
-<element name="U$1" library="Microchip_By_element14_Batch_1" package="SOIC127P600X175-8N" value="MCP2551-I/SN" x="7.62" y="17.78">
-<attribute name="PACKAGE" value="SOIC-8" x="7.62" y="17.78" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="Microchip" x="7.62" y="17.78" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="MCP2551-I/SN" x="7.62" y="17.78" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="9758569" x="7.62" y="17.78" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="69K7604" x="7.62" y="17.78" size="1.778" layer="27" display="off"/>
+<element name="U$1" library="Microchip_By_element14_Batch_1" package="SOIC127P600X175-8N" value="MCP2551-I/SN" x="18.415" y="17.78" rot="R90">
+<attribute name="PACKAGE" value="SOIC-8" x="18.415" y="17.78" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SUPPLIER" value="Microchip" x="18.415" y="17.78" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="MCP2551-I/SN" x="18.415" y="17.78" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_FARNELL" value="9758569" x="18.415" y="17.78" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_NEWARK" value="69K7604" x="18.415" y="17.78" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="+12V" library="wirepad" package="1,6/0,9" value="WIREPAD1,6/0,9" x="8.89" y="24.13" rot="R90"/>
 <element name="GND@1" library="wirepad" package="1,6/0,9" value="WIREPAD1,6/0,9" x="11.43" y="24.13" rot="R90"/>
@@ -546,14 +546,15 @@ design rules under a new name.</description>
 <wire x1="7.62" y1="1.27" x2="14.6685" y2="4.9403" width="0" layer="19" extent="16-16"/>
 <wire x1="1.27" y1="16.51" x2="7.62" y2="1.27" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="VDD">
-<contactref element="U$1" pad="3"/>
-</signal>
 <signal name="CANH">
 <contactref element="CANH" pad="1"/>
+<contactref element="U$1" pad="7"/>
+<wire x1="17.78" y1="20.1422" x2="13.97" y2="24.13" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CANL">
 <contactref element="CANL" pad="1"/>
+<contactref element="U$1" pad="6"/>
+<wire x1="19.05" y1="20.1422" x2="16.51" y2="24.13" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SHIFT_LEFT">
 <contactref element="SHIFT_LEFT" pad="1"/>
@@ -763,6 +764,24 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$64">
 <contactref element="IC1" pad="2"/>
+</signal>
+<signal name="N$1">
+<contactref element="U$1" pad="4"/>
+</signal>
+<signal name="N$2">
+<contactref element="U$1" pad="5"/>
+</signal>
+<signal name="N$9">
+<contactref element="U$1" pad="3"/>
+</signal>
+<signal name="N$10">
+<contactref element="U$1" pad="1"/>
+</signal>
+<signal name="N$11">
+<contactref element="U$1" pad="8"/>
+</signal>
+<signal name="N$17">
+<contactref element="U$1" pad="2"/>
 </signal>
 </signals>
 </board>
